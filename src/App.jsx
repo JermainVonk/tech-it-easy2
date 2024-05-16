@@ -34,15 +34,27 @@ function App() {
         <div className='container2'>
           <img className='tv-image' src={bestSellingTv.sourceImg} alt="tv-picture"/>
           <div className='container3'>
-            <span className='tv-name'>{generatingString(bestSellingTv)}</span>
+              <div className='tv-info'>
+            <span>{generatingString(bestSellingTv)}</span>
 
-            <span className='tv-price'>{generatingPrice(bestSellingTv)}</span>
+            <span>{generatingPrice(bestSellingTv)}</span>
 
-            <span className='tv-size'>{generateSizeString}</span>
+            <span>{generateSizeString(bestSellingTv)}</span>
 
             <span><img className='check-image' src={check}/>wifi<img className='minus-image' src={minus}/>speech<img className='check-image' src={check}/>hdr<img className='check-image' src={check}/>bluetooth<img className='minus-image' src={minus}/>ambilight</span>
-          </div>
+              </div>
+              </div>
         </div>
+        <ul>
+            {inventory.map((product) => {
+                return <li key={product.type}>
+                    <h2>{product.brand}</h2>
+
+
+                </li>
+            })}
+        </ul>
+
     </>
   )
 }

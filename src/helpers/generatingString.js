@@ -1,9 +1,10 @@
-import {bestSellingTv} from "../constants/inventory.js";
+// import {bestSellingTv} from "../constants/inventory.js";
 
 
-function generatingString (){
+
+function generatingString (tv){
     return (
-        `${bestSellingTv.type} ${bestSellingTv.name} - ${bestSellingTv.brand}`
+        `${tv.type} ${tv.name} - ${tv.brand}`
     );
 }
 export default generatingString;
