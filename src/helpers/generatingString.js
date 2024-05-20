@@ -4,7 +4,7 @@
 
 function generatingString (tv){
     return (
-        `${tv.type} ${tv.name} - ${tv.brand}`
+        `${tv.brand} ${tv.type} - ${tv.name}`
     );
 }
 export default generatingString;

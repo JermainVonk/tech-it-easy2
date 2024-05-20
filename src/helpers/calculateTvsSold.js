@@ -1,4 +1,4 @@
-import {inventory} from "../constants/inventory";
+// import {inventory} from "../constants/inventory";
 
 function calculateTvsSold (inventory){
     let totalSold = 0;
@@ -9,6 +9,6 @@ function calculateTvsSold (inventory){
     return totalSold;
 }
 
-console.log(calculateTvsSold(inventory))
+// console.log(calculateTvsSold(inventory))
 
 export default calculateTvsSold;

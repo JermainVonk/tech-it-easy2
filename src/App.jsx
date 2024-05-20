@@ -37,7 +37,7 @@ function App() {
               <div className='tv-info'>
             <span>{generatingString(bestSellingTv)}</span>
 
-            <span>{generatingPrice(bestSellingTv)}</span>
+            <span>€{generatingPrice(bestSellingTv)},-</span>
 
             <span>{generateSizeString(bestSellingTv)}</span>
 
@@ -45,16 +45,36 @@ function App() {
               </div>
               </div>
         </div>
-        <ul>
-            {inventory.map((product) => {
-                return <li key={product.type}>
-                    <h2>{product.brand}</h2>
+        <div>
+            <h1>Alle tvs</h1>
+            <button className='button'>Meest verkocht eerst</button>
+            <button className='button'>Goedkoopste eerst</button>
+            <button className='button'>Meest geschikt voor sport eerst</button>
+            <ul>
+                {inventory.map((product) => (
+                    <li key={product.type}>
+                        <h2>{product.brand}</h2>
+                        <div className='container2'>
+                        <img className='tv-image' src={product['sourceImg']} alt="tv-pic"/>
+                        <div className='container3'>
+                        <div className='tv-info'>
+                        <span>{generatingString(product)}</span>
 
+                        <span>€{generatingPrice(product)},-</span>
 
-                </li>
-            })}
-        </ul>
+                        <span>{generateSizeString(product)}</span>
 
+                        <span>{}</span>
+                        {/* Ben niet verder dan opdracht 2c gekomen. Heb echt moeite gehad met deze opdracht tech-it-easy zou echt opbouwende feedback willen krijgen en wat hulp zodat ik de opdracht toch kan doen.     */}
+
+                        </div>
+                        </div>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+
+        </div>
     </>
   )
 }

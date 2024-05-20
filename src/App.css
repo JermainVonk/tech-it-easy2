@@ -76,3 +76,11 @@ span {
     height: 100%;
 
 }
+.tv-image {
+    max-width: 300px;
+
+}
+
+button {
+    margin-right: 10px;
+}

@@ -1,8 +1,8 @@
-import {bestSellingTv} from "../constants/inventory.js";
+// import {bestSellingTv} from "../constants/inventory.js";
 
 
-function generatingPrice (){
-    return `€${bestSellingTv.price},-`;
+function generatingPrice (tv){
+    return `${tv.price}`;
 
 }
 
